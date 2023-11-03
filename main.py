@@ -34,7 +34,7 @@ while True:
     cv2.imshow("Trapez sosea", trapez * gray)
 
     # 5 Top-Down
-    # tp = np.zeros((height, width), dtype=np.uint8)
+    # tp = np.zeros((height, width), dtype=np.uint8) 
     tp=topDown(trapez*gray)
     cv2.imshow("Top-Down", tp)
 
@@ -59,7 +59,7 @@ while True:
     cv2.imshow("Lines", lines)
 
     # 11 final
-    (finalf, puncteLinii) = finalFrame(coordonate, puncteLinii)
+    finalf = finalFrame(puncteLinii)
     merged=cv2.addWeighted(resizedFrame, 1, finalf, 1, 0)
     cv2.imshow("Final", merged)
 
